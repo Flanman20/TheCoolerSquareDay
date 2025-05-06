@@ -1,0 +1,56 @@
+body {
+    background-color: #f9d381;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    text-shadow: -1px -1px 0 #4b4b4b, 1px -1px 0 #4b4b4b, -1px 1px 0 #4b4b4b, 1px 1px 0 #4b4b4b;
+    font-family: Crang;
+}
+
+#main {
+    width: 300px;
+    border: 10px solid #eaaf4d;
+    
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-right: 150px;
+    padding-left: 150px;
+    margin: auto;
+    
+}
+
+@font-face {
+    font-family: Crang;
+    src: url(Crang.ttf);
+}
+
+
+@keyframes rainbow-strobe {
+    0% { background-color: #e75952; }
+    16% { background-color: #f9938a; }
+    33% { background-color: #58aeee; }
+    50% { background-color: #9ad1f9; }
+    66% { background-color: #c3a7e1; }
+    83% { background-color: #9569c8; }
+    95% {background-color: #8deda7; }
+    100% { background-color: #44c55b; }
+}
+
+.strobe {
+    animation: rainbow-strobe 10s linear infinite alternate;
+}
+
+@keyframes alternate-strobe {
+    0% { color: #44c55b; }
+    50%{ color: #eaaf4d; }
+    100% { color: #e75952; }
+}
+
+.special {
+    animation: alternate-strobe 3s linear infinite alternate;
+}
+
+#normal {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+}
