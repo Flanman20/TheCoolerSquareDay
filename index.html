@@ -5,39 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta credits="ENOS16 Palette (chosen as palette of the day May 5th, 2025) https://lospec.com/palette-list/enos16">
     <title>Date^2</title>
-    <link rel="icon" href="smallLogo.png" type="image/png">
+    <link rel="icon" href="Small Logo.png" type="image/png">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div style="text-align:center">
-        <img src="bigLogo.png" style="width: 30%;">
+        <img src="Big Logo.gif" style="width: 100%;">
     </div>
     <br>
     <div id="main">
-        <p>Today's Date:</p>  
-        <p id="date" style="color:#e75952; margin-top: -20px;"></p>
+        <p>Today's Awesome Sick Cool Date:</p>  
+        <p id="date" style="color:#ffffff; margin-top: -20px;"></p>
         <p id="state" style="font-size: 50px;"></p>
     </div>
     <br>
 
-    <u><H1>"Square Day"</H1></u>
-    <p>Any day where the month and the day are <br>both the square root of the year.</p>
-    <p style="font-size:large">E.G May 5th, 2025 [5/5/25]</p>
+    <u><H1>"The Cooler Square Day"</H1></u>
+    <p>Any day where the month, the day and the year <br> are all perfect squares.</p>
+    <p style="font-size:large">E.G September 25th, 2025 [9/25/2025]</p>
     
-    <audio id="yayAudio" src="yay.mp3" preload="auto"></audio>
+    <audio id="yayAudio" src="yay.wav" preload="auto"></audio>
 
     <script>
         let hasPlayed = false; // Track if the audio has already played
 
         function fetchState() {
             const today = new Date();
-            const year = today.getFullYear() - 2000;
+            const year = today.getFullYear();
             const month = today.getMonth() + 1; // Months are 0-indexed
-            const date = today.getDate();
-            const isSquareDay = Math.sqrt(year) === month && Math.sqrt(year) === date;
+            const day = today.getDate();
 
-            document.getElementById('date').textContent = `${month}/${date}/${today.getFullYear()}`;
+            // Check if each is a perfect square
+            const isSquare = n => Number.isInteger(Math.sqrt(n));
+            const isSquareDay = isSquare(year) && isSquare(month) && isSquare(day);
+
+            document.getElementById('date').textContent = `${month}/${day}/${year}`;
             document.getElementById('state').textContent = isSquareDay ? "Today is a Square Day!" : "Today is not a Square Day.";
+
             if (isSquareDay) {
                 document.body.classList.add('strobe');
                 document.getElementById('state').classList.add('special')
@@ -121,7 +125,7 @@
     <br>
     <br>
     <br>
-    <!--must be cold in here-->
+    <!--all this fire and im still freezing-->
     <br>
     <br>
     <br>
@@ -190,6 +194,6 @@
     <br>
     <br>
     <br>
-    <a href="extras.html" id="normal">extras</a>
+    <a href="extras.html" id="normal">only for real fucking awesome square heads do NOT click if you arent a real FUCKING SQUARE</a>
 </body>
 </html>

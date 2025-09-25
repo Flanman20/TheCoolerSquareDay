@@ -1,15 +1,16 @@
 body {
-    background-color: #f9d381;
+    background-image: url("background.gif");
+    background-repeat: repeat;
     text-align: center;
-    font-size: xx-large;
-    color: white;
-    text-shadow: -1px -1px 0 #4b4b4b, 1px -1px 0 #4b4b4b, -1px 1px 0 #4b4b4b, 1px 1px 0 #4b4b4b;
-    font-family: Crang;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    text-shadow: -1px -1px 0 #ff0000, 3px -1px 0 #ff0000, -1px 1px 0 #ff0000, 1px 1px 0 #ff0000;
+    font-family: Fast-Blaze;
 }
 
 #main {
     width: 300px;
-    border: 10px solid #eaaf4d;
+    border: 10px solid rgb(255, 0, 0);
     
     padding-top: 70px;
     padding-bottom: 70px;
@@ -20,8 +21,8 @@ body {
 }
 
 @font-face {
-    font-family: Crang;
-    src: url(Crang.ttf);
+    font-family: Fast-Blaze;
+    src: url(BloodieCurse-Regular.otf);
 }
 
 
